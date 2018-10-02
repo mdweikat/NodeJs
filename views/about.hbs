@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Help Page</title>
+  </head>
+  <body>
+    <h1>Help Page</h1>
+    <p>Some text here</p>
+
+    <!-- {{log "Look at me!" name }} -->
+
+    <table>
+      <thead>
+        <tr>
+          <td>{{capitalize "Name"}}</td>
+          <td>{{capitalize "Age"}}</td>
+          <td>{{capitalize "Website"}}</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><h4>{{name}}</h4></td>
+          <td>{{age}}</td>
+          <td><a href="{{website}}">{{website}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+    {{> footer}}
+
+  </body>
+</html>
