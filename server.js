@@ -1,7 +1,11 @@
 const express = require('express');
 const hbs = require('hbs');
 
+const post = process.env.PORT || 3000;
+
 app = express();
+
+console.log(process.env);
 
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
@@ -42,6 +46,6 @@ app.get('/help', (req, res) => {
   res.render('help.hbs');
 });
 
-app.listen(8080, () => {
-  console.log('Server is up on port 8080');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
