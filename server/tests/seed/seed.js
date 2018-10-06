@@ -6,13 +6,16 @@ const {User} = require('./../../models/user');
 
 const userOneId = new ObjectID();
 const userTwoId = new ObjectID();
+
+const secretHashKey = 'murad';
+
 const users = [{
   _id: userOneId,
   email: 'andrew@example.com',
   password: 'userOnePass',
   tokens: [{
     access: 'auth',
-    token: jwt.sign({_id: userOneId, access: 'auth'}, 'abc123').toString()
+    token: jwt.sign({_id: userOneId, access: 'auth'}, secretHashKey).toString()
   }]
 }, {
   _id: userTwoId,
