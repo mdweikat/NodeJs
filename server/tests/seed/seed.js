@@ -7,7 +7,7 @@ const {User} = require('./../../models/user');
 const userOneId = new ObjectID();
 const userTwoId = new ObjectID();
 
-const secretHashKey = 'murad';
+const secretHashKey = process.env.jwt_secret;
 
 const users = [{
   _id: userOneId,
